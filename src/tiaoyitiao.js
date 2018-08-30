@@ -33,26 +33,6 @@ export default K.Event.extend({
     this.status_msg = this.options.status_msg;
     this.can_play = this.options.can_play;
     
-    
-    //alert('ActiveXObject' in window);
-  //   var userAgent = window.navigator.userAgent;
-  //   var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1; //判断是否IE<11浏览器  
-  //   var isEdge = userAgent.indexOf("Edge") > -1 && !isIE; //判断是否IE的Edge浏览器  
-  //   var isIE11 = userAgent.indexOf('Trident') > -1 && userAgent.indexOf("rv:11.0") > -1;
-
-  //   //alert(`isIE:${isIE},isEdge:${isEdge},isIE11:${isIE11}`);
-
-  //   //if(!('ActiveXObject' in window)){
-  //     //K.author('yohane<2540546236@qq.com>','18-04-02','-');
-  //  // }
-
-  //  if(!(isIE||isEdge||isIE11)){
-  //   //K.author('yohane<2540546236@qq.com>','18-04-02','-');
-  //  }
-    
-    //alert('b3');
-
-    //console.img('http://static.xyimg.net/gamesite/mu/mufed/common/img/aa.jpg');
 
     if(!this._supportGl()){
 
@@ -78,90 +58,12 @@ export default K.Event.extend({
     .applyAxisAngle(new THREE.Vector3(0,1,0), -.2 );
 
 
-
-    //////
-    // var controls = {
-    //   offx:0,offy:0,offz:0
-    //   ,camx:0,camy:0,camz:0
-    //   ,rz:0
-    //   ,co1:0
-    //   ,chacter_x:0,chacter_z:0
-    //   ,ttt:0
-    //   ,fog_co:new THREE.Color(1,0,1)
-    // }
-   
-    // var gui = new dat.GUI();
-
-    // gui.add(controls,'offx',-200,200).step(1).onChange(e=>{
-    //   //FreeCamera.x = e;
-    //   this.light.position.x = e;
-    // });
-
-
-    
-    // gui.add(controls,'offy',-200,200).step(1).onChange(e=>{
-    //   //FreeCamera.y = e;
-    //   this.light.position.y = e;
-      
-    // });
-    
-    // gui.add(controls,'offz',-200,200).step(1).onChange(e=>{
-    //   //FreeCamera.z = e;
-    //   this.light.position.z = e; 
-    // });
-
-
-    // gui.add(controls,'camx',-300,300).step(1).onChange(e=>{
-      
-    // });
-    // gui.add(controls,'camy',-1000,1000).step(.5).onChange(e=>{
-    //   FreeCamera.y = e;
-
-    // });
-    // gui.add(controls,'camz',-300,300).step(.5).onChange(e=>{
-    //   FreeCamera.z = e;
-
-    // });
-
-    // gui.add(controls,'chacter_x',-2000,2000).step(1).onChange(e=>{
-    //   mesh_chacter.position.x = e;
-    // });
-    // gui.add(controls,'chacter_z',-2000,2000).step(1).onChange(e=>{
-    //   mesh_chacter.position.z = e;
-    // });
-
-    // gui.addColor(controls, 'fog_co').onChange(e=>{
-      
-    //   this.scene.background = new THREE.Color(e);
-    //   this.scene.fog = new THREE.FogExp2(this.scene.background, 0.0006 );
-
-    // });
-
-    // var rgb_ = {r:.6,g:1,b:1};
-    // gui.add(controls,'ttt',0,1).step(.05).onChange(e=>{
-    //   var [r,g,b] = [rgb_.r*e,rgb_.g*e,rgb_.b*e];
- 
-    //   this.scene.background = new THREE.Color().setRGB( r,g,b );
-    //   this.scene.fog = new THREE.FogExp2(this.scene.background, 0.0006 );
-      
-    // });
-
-
-    ////
-    //debugger;
-
-    
     this.num_of_game = this.options.num_of_game;
     this.score = 0;
     this.current_grid = null;
     this._keydown = false;
 
-    
-    //this._board_map = new THREE.TextureLoader().load(require('./common/img/boardx.jpg'));
-
-   // this._board_map = TextureManager.boards_small[0];
    
-
     this.Phases = {};
 
     this._createStage();
@@ -389,17 +291,6 @@ export default K.Event.extend({
     })
     .start();
 
-    
-
-
-
-    //return;
-
-
-    //debugger;
-
-    //mesh_point.lookAt( new THREE.Vector3(FreeCamera.x,800,FreeCamera.z));
- 
 
   }
   ,_run(){
@@ -553,74 +444,10 @@ export default K.Event.extend({
 
     });
 
-    // addEventListener('mousedown',(e)=>{
-
-    //   e.preventDefault();
-
-    //     this._keydown = true;
-
-    // });
-
-    // addEventListener('mouseup',(e)=>{
-
-    //    e.preventDefault();
-
-      
-    //   this._keydown = false;
-    //   this.trigger('_keyup');
-      
-
-    // });
-
-
-
-    // addEventListener('keydown',(e)=>{
-
-    //   //if(e.keyCode == 75) this._restart();  
-
-    //   if(e.keyCode===32) e.preventDefault();
-
-    //   if(this._zoom.hidding) return;
-      
-    //   if(this._request) return;
-
-    //   if(this.num_of_game===0) return this._noChance();
-
-    //   if(e.keyCode===32){
-    //     //console.log(this.chessman.canHolding());
-    //     //return;
-
-    //     if(this.chessman.canHolding()){
-    //       //console.log('e');
-    //       this.chessman.holding();
-    //     } 
-
-    //   }
-
-    // });
-
-    // addEventListener('keyup',(e)=>{
-
-    //   //return;
-    //   if(e.keyCode===32) e.preventDefault();
-
-    //   if(e.keyCode===32){
-
-    //     if(this.chessman.canFlipping()){
-    //       this.chessman.flipping();
-    //     }
-  
-
-    //   }
-
-    // });
-
-
     mtsp.execute();
 
     //////////////
 
-    //fth.trigger('clear');
   }
   ,_createPhases(){
    
@@ -1008,66 +835,6 @@ export default K.Event.extend({
       this.mesh_score.hide();
 
 
-      // msg.geometry.applyMatrix(
-      //   new THREE.Matrix4()
-      //   .makeTranslation(0,13.5,2)
-
-      // );
-
-
-
-      // let $score = document.createElement('span');
-      // this.$container[0].appendChild($score);
-
-      // $($score).css({
-      //   'position':'absolute',right:0,top:0
-      //   ,'padding':'10px 20px'
-      //   ,'font-size':'40px'
-      //   ,'color':'#e91e63d1'
-      //   ,'-webkit-user-select':'none' 
-      //   ,'user-select': 'none'
-      // });
-
-      // $score.textContent = '0';
-
-
-      // this.$score = $score;
-
-      // $(this.$score).hide();
-
-      // let {width,height} = this.renderer.getSize();
-
-      // let cv_ = document.createElement('canvas');
-      // let c = cv_.getContext('2d');
-
-  
-      // let w = width*.15;
-      // let h = width*.1;
-
-      // cv_.width = w,cv_.height = h;
-
-      // c.fillStyle = 'teal';
-      // //c.textBaseline = '';
-      // c.fillRect(0,0,cv_.width,cv_.height);
-      
-      // let texture_ = new THREE.Texture( this._cv );
-      // //texture_.needsUpdate = true;
-
-      // let score_panel = new THREE.Mesh(
-      //   new THREE.PlaneGeometry(cv_.width,cv_.height)
-      //   ,new THREE.MeshBasicMaterial({
-      //     map:texture_
-
-      //   })
-      // );
-
-      // score_panel.material.map.needsUpdate = true;
-
-      // score_panel.position.copy(
-      //   new THREE.Vector3(width*.5-w*.5,height*.5-h*.5,0)
-      // );
-
-      // that.orth_scene.add(score_panel);
      
     }
     
@@ -1226,70 +993,6 @@ export default K.Event.extend({
 
     ///////////////////////////////
 
-
-    //this._request = true;
-    
-    //$.get(Api.NextGrid,{},res=>{
-
-      //res = JSON.parse(res);
-
-      //this._request = false;
-
-     // return;
-
-    // var goods = null;
-
-    // //如果有礼物
-    // if(this.goods&&this.goods.length){
-    //   //跳了2个格子，有礼物下个分礼物
-    //   if(this._phase===2){
-    //      goods = this.goods.shift();
-    //   }
-
-    //   //没跳10个也分一个
-    //   if(this._phase%10===0){
-    //     goods = this.goods.shift();
-    //   }
-
-    // }
-
-    // console.log('add next grid');
-
-    // let grid_height = 800;
-    
-    // //{name:'name233',cdk:'cdk-123456'}
-    // var mesh = Cube({
-    //   height:grid_height
-    //   ,goods
-    //   //,billboard:this._phase%2===0?true:false
-    //   ,billboard:random()<.3?true:false
-    //   ,billboard_map :this._textures.boards_small[0]
-    // });
-
-    // mesh.castShadow = false;
-
-    // console.log(this.goods);
-
-    // mesh.material.opacity = 1;
-
-    // //mesh.position.x = this.current_grid.position.x + 100;
-
-    // var gap =  min(this._phase/this._max_phase,1)*50;
-
-    // //console.log(min(this._phase/this._max_phase,1),gap);
-
-    // mesh.position.x = this.current_grid.position.x + 50+random()*gap;
-    
-
-    // this.scene.add(mesh);
-
-    // this.cubes.push(mesh);
-
-    //});
-
-
-
-
    
   }
   ,_checkChessManOutSide(){
@@ -1346,25 +1049,7 @@ export default K.Event.extend({
         //console.log(point);
 
         {
-          // let spe = new THREE.Mesh(
-          //   new THREE.SphereGeometry(1)
-          //   ,new THREE.MeshBasicMaterial({color:0xffffff*random()})
-          // );
-          // spe.position.copy(point);
-          // spe.position.copy( 
-          //   this.current_grid.position.clone().add(
-          //     new THREE.Vector3(0,this.current_grid.geometry.parameters.height*.5,0)
-          //   )
-          // );
-          // this.scene.add(spe);
-
-
-          // spe = spe.clone();
-          // //spe.position.copy(point);
-          // spe.position.copy( 
-          //  point
-          // );
-          // this.scene.add(spe);
+ 
 
           let point_center = this.current_grid.position.clone().add(
             new THREE.Vector3(0,this.current_grid.geometry.parameters.height*.5,0)
@@ -1481,31 +1166,6 @@ export default K.Event.extend({
     renderer.shadowMap.type = THREE.PCFSoftShadowMap; // default THREE.PCFShadowMap
 
     $container.append(renderer.domElement);
-
-
-    // $(renderer.domElement).on('click',e=>{
-    //   //$container.css({width:'100%',height:'100%'});
-
-    //   var elem = renderer.domElement;
-    //   //debugger;
-
-    //   if (elem.webkitRequestFullscreen){
-    //     //debugger;
-    //     elem.webkitRequestFullscreen();
-
-    //     setTimeout(()=>{
-    //       //alert(innerWidth);
-    //       this.renderer.setSize(innerWidth, innerHeight);
-    //     },233);
-      
-    //   }
-
-    // });
-
-    // alert(renderer.domElement.onwebkitFullscreenchange);
-    
-
-
 
 
     scene.background = new THREE.Color().setRGB( 0.6, 1, 1 );
