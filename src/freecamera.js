@@ -337,14 +337,14 @@ import {Vec} from 'miku-util';
       
     });
 
-    el.addEventListener('touchstart',e=>{
+    // el.addEventListener('touchstart',e=>{
 
       
 
-      if(!bx)bx = e.touches[0].pageX;
-      if(!by)by = e.touches[0].pageY;
+    //   if(!bx)bx = e.touches[0].pageX;
+    //   if(!by)by = e.touches[0].pageY;
       
-    });
+    // });
 
 
 
@@ -385,42 +385,43 @@ import {Vec} from 'miku-util';
 
       _.trigger('rotate',{delta_x,delta_y});
     });
-    el.addEventListener('touchmove',e=>{
+    // el.addEventListener('touchmove',e=>{
      
 
 
-      if(!behavior.rotate) return;
-      if(!bx || !by) return;
-      delta_x = (e.touches[0].pageX-bx)*-.2,delta_y = (e.touches[0].pageY-by)*.3;
-      bx = e.touches[0].pageX,by = e.touches[0].pageY;
-      _.φ += delta_x,_.θ += delta_y;
+    //   if(!behavior.rotate) return;
+    //   if(!bx || !by) return;
+    //   delta_x = (e.touches[0].pageX-bx)*-.2,delta_y = (e.touches[0].pageY-by)*.3;
+    //   bx = e.touches[0].pageX,by = e.touches[0].pageY;
+    //   _.φ += delta_x,_.θ += delta_y;
 
 
-      _.the = _.θ;
-      _.phi = _.φ;
+    //   _.the = _.θ;
+    //   _.phi = _.φ;
+      
 
 
-      // this.v3_look = new Vec(sin(θ)*sin(φ),cos(θ),sin(θ)*cos(φ));
+    //   // this.v3_look = new Vec(sin(θ)*sin(φ),cos(θ),sin(θ)*cos(φ));
 
 
-      // if(!this.v3_look_bef ){
-      //   this.v3_look_bef = this.v3_look;
-      // }
-      // this.v3_look_delta = this.v3_look.sub(this.v3_look_bef);
+    //   // if(!this.v3_look_bef ){
+    //   //   this.v3_look_bef = this.v3_look;
+    //   // }
+    //   // this.v3_look_delta = this.v3_look.sub(this.v3_look_bef);
 
-      // console.log(this.v3_look_delta);
-      // this.v3_look_bef = this.v3_look;
-
-
-      // _.θ<range.the[0] && (_.θ=range.the[0]);
-      _.θ>range.the[1] && (_.θ=range.the[1]);
-
-      _.φ<range.fai[0] && (_.φ=range.fai[0]);
-      _.φ>range.fai[1] && (_.φ=range.fai[1]);
+    //   // console.log(this.v3_look_delta);
+    //   // this.v3_look_bef = this.v3_look;
 
 
-      _.trigger('rotate',{delta_x,delta_y});
-    });
+    //   // _.θ<range.the[0] && (_.θ=range.the[0]);
+    //   _.θ>range.the[1] && (_.θ=range.the[1]);
+
+    //   _.φ<range.fai[0] && (_.φ=range.fai[0]);
+    //   _.φ>range.fai[1] && (_.φ=range.fai[1]);
+
+
+    //   _.trigger('rotate',{delta_x,delta_y});
+    // });
 
     el.addEventListener('mouseup',e=>{
       bx = by = 0;

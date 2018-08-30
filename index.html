@@ -1,36 +1,38 @@
 <!DOCTYPE html><html lang="zh-CN"><head>
 	<meta charset="UTF-8">
-	<title>跳一跳投影矩阵版</title>
+	<title>想跳一下</title>
 	<script src="//static.xyimg.net/gamesite/mu/mufed/common/js/polyfill.min.js"></script>
 	<script src="//static.xyimg.net/common/js/jquery-1.8.3.min.js"></script>
 	<script src="//static.xyimg.net/gamesite/mu/mufed/common/mu-mobile/mu-mobile-00519f.js"></script>
 	<script src="//static.xyimg.net/gamesite/mu/mufed/common/js/three-86.js"></script>
-	<script src="//static.xyimg.net/gamesite/mu/mufed/xycs180320/dist/scripts/main1-50db96.js"></script>
 </head>
 <body>
 	<style>
-
+		html,body{width:100%;height:100%;}
+		body{max-width:750px;}
+		#holder{
+			position: relative;
+			left:0;top:50%;
+			transform:translate3d(0,-50%,0);
+			width:100%;
+			height:100%;
+		}
 	</style>
 	<script>
  	
 		MuMobile
-		//.task('Horizontal',{})
 		.task('Meta',{scalable:false})
 		//.task('WxInfo',{})
-		// .task('Loading',{})
 		.run();
 
 
 	</script>
 
 	<main class="rel wh">
-		<section>
+		<section id="holder">
 			<div id="game_container" class="rel" style="">
 				
 			</div>
-			<!-- <p style="font-size:.5rem;">
-				pc端长按空格，移动端长按屏幕
-			</p> -->
 		</section>
 		
 	</main>	
@@ -45,11 +47,25 @@
 			// 	}
 			// }
 		//}
-
 		K(function(){
-
+			var {offsetWidth,offsetHeight} = document.body;
 			var $game_container = $('#game_container');
-			$game_container.width(innerWidth).height(innerWidth*.5)
+			$game_container.on('touchstart',e=>{
+				e.preventDefault()
+			});
+
+			if(K.Brower.version.mobile){
+				$game_container.width(offsetHeight).height(offsetWidth)
+				.css({
+					'transform-origin':'0% 0%'
+					,'transform':'rotateZ(90deg) translate3d(0%,-100%,0)',
+				})
+				//debugger
+			}else{
+				$game_container.width(offsetWidth).height(offsetWidth*.5)
+				$(`<p style="font-size:.35rem;text-align:center;">pc端长按空格=w=</p>`).appendTo('#holder')
+			}
+			
 
 			var tyt = new TiaoYiTiao({
 				$container :'#game_container'
@@ -81,11 +97,8 @@
 				// // 	//
 					
 				// // });
-
 			});
 		})
-			
-
-
+		
 	</script>
 </body></html>

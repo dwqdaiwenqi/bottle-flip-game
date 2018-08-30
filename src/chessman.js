@@ -86,7 +86,7 @@ var ChessMan = ()=>{
       this.hold_coefficient += increasing;
       this.hold_coefficient > 1 && (this.hold_coefficient =1);
       
-      this.scale.y = (1-this.hold_coefficient)*.5+.5;
+      this.scale.y = (1-this.hold_coefficient)*.7+.3;
 
       //console.log(this.scale.y);
     }

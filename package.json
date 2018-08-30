@@ -77,10 +77,6 @@
   },
   "scripts": {
     "//qwq": "dev+static+img+svn↓",
-    "dev": "webpack --w",
-    "dev-hmr": "webpack-dev-server --hot --quiet --port 8081 --host 192.168.84.78",
-    "dev-test": "gulp img && webpack --w --config webpack-dev-test.js",
-    "pro": "gulp img && webpack && node sync-code.js",
     "spe": "gulp spe",
     "img": "gulp img",
     "cps": "gulp cps",

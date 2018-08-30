@@ -534,24 +534,24 @@ export default K.Event.extend({
     });
 
 
-    // addEventListener('touchstart',(e)=>{
+    addEventListener('touchstart',(e)=>{
 
-    //   e.preventDefault();
+      e.preventDefault();
 
-    //     this._keydown = true;
+        this._keydown = true;
 
-    // });
+    });
 
-    // addEventListener('touchend',(e)=>{
+    addEventListener('touchend',(e)=>{
 
-    //    e.preventDefault();
+       e.preventDefault();
 
       
-    //   this._keydown = false;
-    //   this.trigger('_keyup');
+      this._keydown = false;
+      this.trigger('_keyup');
       
 
-    // });
+    });
 
     // addEventListener('mousedown',(e)=>{
 
