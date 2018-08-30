@@ -1,8 +1,8 @@
 {
-  "name": "daidaidai",
+  "name": "flip-bottle-game",
   "version": "1.0.0",
   "email" : "2540546236@qq.com",
-  "description": "module that neede to be installed...",
+  "description": "...",
   "main": "src/main1.js",
   "pagejs": [
     "polyfill",
