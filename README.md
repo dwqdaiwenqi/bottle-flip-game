@@ -12,5 +12,10 @@
 
 ## Play
 
-Online -> click [here](https://dwqdaiwenqi.github.io/bottle-flip-game/)
+PC端试玩，[这儿](https://dwqdaiwenqi.github.io/bottle-flip-game/)
+
+移动端试玩 ↓
+
+<img src="./qr.jpg" style="margin:0 auto;">
+
 ---
