@@ -1,0 +1,91 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+	<meta charset="UTF-8">
+	<title>跳一跳投影矩阵版</title>
+	<script src="//static.xyimg.net/gamesite/mu/mufed/common/js/polyfill.min.js"></script>
+	<script src="//static.xyimg.net/common/js/jquery-1.8.3.min.js"></script>
+	<script src="//static.xyimg.net/gamesite/mu/mufed/common/mu-mobile/mu-mobile-00519f.js"></script>
+	<script src="//static.xyimg.net/gamesite/mu/mufed/common/js/three-86.js"></script>
+	<script src="//static.xyimg.net/gamesite/mu/mufed/xycs180320/dist/scripts/main1-50db96.js"></script>
+</head>
+<body>
+	<style>
+
+	</style>
+	<script>
+ 	
+		MuMobile
+		//.task('Horizontal',{})
+		.task('Meta',{scalable:false})
+		//.task('WxInfo',{})
+		// .task('Loading',{})
+		.run();
+
+
+	</script>
+
+	<main class="rel wh">
+		<section>
+			<div id="game_container" class="rel" style="">
+				
+			</div>
+			<!-- <p style="font-size:.5rem;">
+				pc端长按空格，移动端长按屏幕
+			</p> -->
+		</section>
+		
+	</main>	
+	<script type="text/javascript" src="dist/scripts/main1.js"></script>
+		
+	<script>
+
+		//onload = ()=>{
+			// game_container.onclick = ()=>{
+			// 	if(game_container.webkitRequestFullscreen){
+			// 		game_container.webkitRequestFullscreen();
+			// 	}
+			// }
+		//}
+
+		K(function(){
+
+			var $game_container = $('#game_container');
+			$game_container.width(innerWidth).height(innerWidth*.5)
+
+			var tyt = new TiaoYiTiao({
+				$container :'#game_container'
+				//,goods
+				,num_of_game:Number.MAX_VALUE
+				,Api:{}
+				,can_play:true
+				,status_msg:'status_msg!!!'
+			});
+
+
+			tyt.on('next-grid',function(props){
+		
+				console.log('Api.NextGrid:',props);
+
+					props.fn( {
+						goods: null
+					}  );
+			});
+
+			tyt.on('score',function(props){
+				// console.log('score,',props);
+			});
+
+			tyt.on('round-of-game',function(props){
+				// console.log('Api.RecordScore:',props.score,props.num_of_game);
+
+				// // $.get(Api.RecordScore,{},function(res){
+				// // 	//
+					
+				// // });
+
+			});
+		})
+			
+
+
+	</script>
+</body></html>
