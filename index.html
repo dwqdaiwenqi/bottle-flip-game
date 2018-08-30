@@ -15,8 +15,6 @@
 			position: relative;
 			left:0;top:50%;
 			transform:translate3d(0,-50%,0);
-			width:100%;
-			height:100%;
 		}
 	</style>
 	<script>
@@ -51,20 +49,24 @@
 		K(function(){
 			var {offsetWidth,offsetHeight} = document.body;
 			var $game_container = $('#game_container');
+			
+
 			$game_container.on('touchstart',e=>{
 				e.preventDefault()
 			});
 
 			if(K.Brower.version.mobile){
+				$('#holder').css({width:'100%',height:'100%'})
+
 				$game_container.width(offsetHeight).height(offsetWidth)
 				.css({
 					'transform-origin':'0% 0%'
 					,'transform':'rotateZ(90deg) translate3d(0%,-100%,0)',
 				})
-				//debugger
+
 			}else{
 				$game_container.width(offsetWidth).height(offsetWidth*.5)
-				$(`<p style="font-size:.35rem;text-align:center;">pc端长按空格=w=</p>`).appendTo('#holder')
+				$(`<p style="font-size:32px;text-align:center;">pc端长按空格=w=</p>`).appendTo('#holder')
 			}
 			
 
