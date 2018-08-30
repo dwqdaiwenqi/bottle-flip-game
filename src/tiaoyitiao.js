@@ -11,6 +11,31 @@ import Detector from './detector';
 
 var Api = { };
 
+{
+  let {offsetWidth,offsetHeight} = document.body;
+  let $game_container = $('#game_container');
+
+  $game_container.on('touchstart',e=>{
+    e.preventDefault()
+  });
+
+  
+  if(K.Brower.version.mobile){
+    $('#holder').css({width:'100%',height:'100%'})
+
+    $game_container.width(offsetHeight).height(offsetWidth)
+    .css({
+      'transform-origin':'0% 0%'
+      ,'transform':'rotateZ(90deg) translate3d(0%,-100%,0)',
+    })
+    
+  }else{
+    $game_container.width(offsetWidth).height(offsetWidth*.5)
+    $(`<p style="font-size:32px;text-align:center;">pc端长按空格=w=</p>`).appendTo('#holder')
+  }
+}
+
+
 export default K.Event.extend({
   init(opt){
     this._super();

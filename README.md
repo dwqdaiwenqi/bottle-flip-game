@@ -15,7 +15,7 @@
 
 ## Play
 
-PC端试玩，[这儿](https://dwqdaiwenqi.github.io/bottle-flip-game/)
+PC试玩，[这儿](https://dwqdaiwenqi.github.io/bottle-flip-game/)
 
 移动扫码 ↓
 
