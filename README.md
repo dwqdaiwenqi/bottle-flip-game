@@ -13,11 +13,11 @@
 <img src="./preview-pc.jpg" style="margin:0 auto;">
 长按空格键蓄力跳跃
 
-## Play
+## 试玩
 
-PC试玩，[这儿](https://dwqdaiwenqi.github.io/bottle-flip-game/)
+点击这儿，[这儿](https://dwqdaiwenqi.github.io/bottle-flip-game/)
 
-移动扫码 ↓
+或扫码 ↓
 
 <img src="./qr.jpg" style="margin:0 auto;">
 
