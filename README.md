@@ -15,7 +15,7 @@
 
 ## 试玩
 
-点击[这儿](https://dwqdaiwenqi.github.io/bottle-flip-game/)
+点击 [这儿](https://dwqdaiwenqi.github.io/bottle-flip-game/)
 
 或扫码 ↓
 
