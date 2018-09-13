@@ -179,11 +179,7 @@ if(ENV==='pro'){
   //config.plugins.push( new CleanPlugin(['dist/*/*.*']));
   config.plugins.push( new CleanPlugin(['dist/**/*']));
  
-  config.plugins.push(new webpack.optimize.UglifyJsPlugin({
-    compress: {
-      warnings: false
-    }
-  }));
+
 
   //////////////
   config.publicPath =  '//'+pkg['pro-url']+dir+'/dist/';

@@ -80,6 +80,7 @@
     "spe": "gulp spe",
     "img": "gulp img",
     "cps": "gulp cps",
+    "pro": "webpack --mode production",
     "start": "nodemon --watch server.js server.js"
   },
   "author": "daidaidai <http://www.cnblogs.com/daidaidai>",
