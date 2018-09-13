@@ -137,10 +137,10 @@ export default K.Event.extend({
 
       TextureManager.initial({
         boards_small:[
-           require('./common/img/boardx2.jpg'),require('./common/img/boardx3.jpg'),require('./common/img/boardx6.jpg')
-           ,require('./common/img/boardx.jpg'),require('./common/img/board3.jpg'),require('./common/img/boarda.jpg')
-           ,require('./common/img/boardb.jpg'),require('./common/img/boarde.jpg'),require('./common/img/board1.jpg')
-           ,require('./common/img/boardf.jpg'),require('./common/img/boardg.jpg')
+          //  require('./common/img/boardx2.jpg'),require('./common/img/boardx3.jpg'),require('./common/img/boardx6.jpg')
+          //  ,require('./common/img/boardx.jpg'),require('./common/img/board3.jpg'),require('./common/img/boarda.jpg')
+           require('./common/img/boardb.jpg'),require('./common/img/boarde.jpg'),require('./common/img/board1.jpg')
+          //  ,require('./common/img/boardf.jpg'),require('./common/img/boardg.jpg')
          ]
         ,boards_big:[require('./common/img/game-board1.jpg'),require('./common/img/game-board2.jpg')]
         ,floor:[require('./common/img/floor2.jpg')]
