@@ -1,6 +1,6 @@
 const fs = require('fs-extra');
 const path = require('path');
-const url = require('url');
+const url = require('url')
 const webpack = require('webpack');
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
